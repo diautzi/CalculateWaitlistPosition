@@ -1,12 +1,10 @@
 const calculatePosition = (position, daysWaiting, numberOfReferrals) => {
-    let temporaryPosition = 0;
     if (numberOfReferrals == 0 && daysWaiting === 0) {
          position;
     }  
     else {
         if (numberOfReferrals > 0) {
-            temporaryPosition = temporaryPosition + Math.round(1000/numberOfReferrals);
-            position = position - temporaryPosition; 
+            position = position - Math.round(1000/numberOfReferrals);
             numberOfReferrals -= 1;
         }
         if ( daysWaiting > 0) {
